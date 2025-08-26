@@ -1,0 +1,228 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  background: #f0f2f5;
+  color: #333;
+  line-height: 1.6;
+}
+
+header {
+  background: #4CAF50;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+
+main {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 1rem;
+}
+
+
+#welcome-login {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  margin: 2rem 0;
+  flex-wrap: wrap;
+}
+
+#welcome-message {
+  flex: 1;
+}
+
+#welcome-message h1 {
+  font-size: 2.2rem;
+  color: #4CAF50;
+  margin-bottom: 1rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+#welcome-message h1:hover {
+  color: #388E3C;
+  transform: scale(1.05);
+}
+
+#welcome-message p {
+  font-size: 1.1rem;
+  color: #333;
+}
+
+#auth-forms {
+  display: flex;
+  flex: 1;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.form-card {
+  background: #f9f9f9;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  min-width: 250px;
+  flex: 1;
+  transition: all 0.3s ease;
+}
+
+.form-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.form-card h2 {
+  color: #4CAF50;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+
+.form-card form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-card form input {
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  transition: all 0.3s ease;
+}
+
+.form-card form input:focus {
+  border-color: #4CAF50;
+  box-shadow: 0 0 8px rgba(76, 175, 80, 0.5);
+  transform: scale(1.05);
+  outline: none;
+  background: #e8f5e9;
+}
+
+
+.form-card form button {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.btn-login {
+  background: #2196F3;
+  color: white;
+}
+
+.btn-login:hover {
+  background: #1976D2;
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.btn-register {
+  background: #FF9800;
+  color: white;
+}
+
+.btn-register:hover {
+  background: #F57C00;
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.btn-add {
+  background: #4CAF50;
+  color: white;
+}
+
+.btn-add:hover {
+  background: #45a049;
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+
+#dashboard h2 {
+  margin-top: 2rem;
+  color: #4CAF50;
+}
+
+#habits-list {
+  list-style: none;
+}
+
+#habits-list li {
+  padding: 10px;
+  margin: 5px 0;
+  background: #f9f9f9;
+  border-left: 5px solid #4CAF50;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+#habits-list li button {
+  padding: 5px 10px;
+  background: #2196F3;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#habits-list li button:hover {
+  background: #0b7dda;
+  transform: scale(1.05);
+}
+
+#ranking p, #badges span {
+  padding: 5px;
+  display: block;
+}
+
+#badges span {
+  background: #ffeb3b;
+  margin: 3px 0;
+  border-radius: 5px;
+  padding: 5px 10px;
+  display: inline-block;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#badges span:hover {
+  transform: scale(1.1);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+
+@media (max-width: 768px) {
+  #welcome-login {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #auth-forms {
+    flex-direction: column;
+  }
+}
+
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+  background: #ddd;
+  border-radius: 10px;
+}

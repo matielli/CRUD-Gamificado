@@ -1,6 +1,6 @@
-const API_URL = "http://localhost/crud_gamificado/api"; // ajuste se necessário
+const API_URL = "http://localhost/crud_gamificado/api"; 
 
-// Criar usuário
+
 document.getElementById("user-form").addEventListener("submit", async (e) => {
   e.preventDefault();
   const name = document.getElementById("name").value;
@@ -17,7 +17,7 @@ document.getElementById("user-form").addEventListener("submit", async (e) => {
   loadBadges();
 });
 
-// Criar hábito
+
 document.getElementById("habit-form").addEventListener("submit", async (e) => {
   e.preventDefault();
   const title = document.getElementById("habit-title").value;
@@ -36,7 +36,7 @@ document.getElementById("habit-form").addEventListener("submit", async (e) => {
   loadBadges();
 });
 
-// Carregar hábitos
+
 async function loadHabits(user_id) {
   const res = await fetch(`${API_URL}/habits/read.php?user_id=${user_id}`);
   const data = await res.json();
@@ -49,7 +49,7 @@ async function loadHabits(user_id) {
   });
 }
 
-// Carregar ranking
+
 async function loadRanking() {
   const res = await fetch(`${API_URL}/ranking.php`);
   const data = await res.json();
@@ -62,7 +62,7 @@ async function loadRanking() {
   });
 }
 
-// Carregar badges
+
 async function loadBadges() {
   const res = await fetch(`${API_URL}/badges/read.php`);
   const data = await res.json();
@@ -75,6 +75,6 @@ async function loadBadges() {
   });
 }
 
-// Inicialização
+
 loadRanking();
 loadBadges();

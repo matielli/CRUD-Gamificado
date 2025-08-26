@@ -12,33 +12,43 @@
   </header>
 
   <main>
-    <!-- Login -->
-    <section id="login-section">
-      <h2>🔑 Login</h2>
-      <form id="login-form">
-        <input type="text" name="username" placeholder="Nome de usuário" required>
-        <input type="password" name="password" placeholder="Senha" required>
-        <button type="submit">Login</button>
-      </form>
+    
+    <section id="welcome-login">
+      <div id="welcome-message">
+        <h1>Seja bem-vindo ao CRUD Gamificado!</h1>
+        <p>Cadastre-se ou faça login para começar a ganhar pontos, badges e subir no ranking!</p>
+      </div>
+
+      <div id="auth-forms">
+       
+        <div class="form-card">
+          <h2>🔑 Login</h2>
+          <form id="login-form">
+            <input type="text" name="username" placeholder="Nome de usuário" required>
+            <input type="password" name="password" placeholder="Senha" required>
+            <button type="submit" class="btn-login">Login</button>
+          </form>
+        </div>
+
+        
+        <div class="form-card">
+          <h2>📝 Registrar</h2>
+          <form id="register-form">
+            <input type="text" name="username" placeholder="Nome de usuário" required>
+            <input type="password" name="password" placeholder="Senha" required>
+            <button type="submit" class="btn-register">Registrar</button>
+          </form>
+        </div>
+      </div>
     </section>
 
-    <!-- Registro -->
-    <section id="register-section">
-      <h2>📝 Registrar</h2>
-      <form id="register-form">
-        <input type="text" name="username" placeholder="Nome de usuário" required>
-        <input type="password" name="password" placeholder="Senha" required>
-        <button type="submit">Registrar</button>
-      </form>
-    </section>
-
-    <!-- Dashboard -->
+    
     <section id="dashboard" style="display:none;">
       <h2>📌 Meus Hábitos</h2>
       <form id="habit-form">
         <input type="text" name="name" placeholder="Título do Hábito" required>
         <input type="text" name="description" placeholder="Descrição">
-        <button type="submit">Adicionar Hábito</button>
+        <button type="submit" class="btn-add">Adicionar Hábito</button>
       </form>
       <ul id="habits-list"></ul>
 

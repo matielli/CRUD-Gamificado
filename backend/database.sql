@@ -1,8 +1,8 @@
--- Banco de dados CRUD Gamificado
+
 CREATE DATABASE IF NOT EXISTS crud_gamificado;
 USE crud_gamificado;
 
--- Usuários
+
 CREATE TABLE IF NOT EXISTS users (
     id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(100) NOT NULL,
@@ -11,7 +11,7 @@ CREATE TABLE IF NOT EXISTS users (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
--- Hábitos/Tarefas
+
 CREATE TABLE IF NOT EXISTS habits (
     id INT AUTO_INCREMENT PRIMARY KEY,
     user_id INT NOT NULL,
@@ -21,7 +21,7 @@ CREATE TABLE IF NOT EXISTS habits (
     FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
 );
 
--- Conclusões (quando o usuário completa um hábito)
+
 CREATE TABLE IF NOT EXISTS completions (
     id INT AUTO_INCREMENT PRIMARY KEY,
     habit_id INT NOT NULL,
@@ -31,7 +31,7 @@ CREATE TABLE IF NOT EXISTS completions (
     FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
 );
 
--- Badges/Conquistas
+
 CREATE TABLE IF NOT EXISTS badges (
     id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(100) NOT NULL,
@@ -39,7 +39,7 @@ CREATE TABLE IF NOT EXISTS badges (
     points_required INT NOT NULL
 );
 
--- Badges desbloqueados por usuário
+
 CREATE TABLE IF NOT EXISTS user_badges (
     id INT AUTO_INCREMENT PRIMARY KEY,
     user_id INT NOT NULL,
@@ -49,7 +49,7 @@ CREATE TABLE IF NOT EXISTS user_badges (
     FOREIGN KEY (badge_id) REFERENCES badges(id) ON DELETE CASCADE
 );
 
--- Inserir alguns badges iniciais
+
 INSERT INTO badges (name, description, points_required) VALUES
 ('Iniciante', 'Complete seu primeiro hábito', 10),
 ('Disciplinado', 'Acumule 100 pontos', 100),

@@ -9,14 +9,14 @@ class Gamification {
         $this->db = Database::getInstance()->getConnection();
     }
 
-    // Adiciona pontos ao usuário
+  
     public function addPoints($userId, $points) {
         $stmt = $this->db->prepare("UPDATE users SET points = points + ? WHERE id = ?");
         $stmt->execute([$points, $userId]);
         $this->checkBadges($userId);
     }
 
-    // Verifica e concede badges
+  
     public function checkBadges($userId) {
         $stmt = $this->db->prepare("SELECT points FROM users WHERE id = ?");
         $stmt->execute([$userId]);
@@ -36,7 +36,7 @@ class Gamification {
         }
     }
 
-    // Calcular ranking
+  
     public function getRanking() {
         $stmt = $this->db->query("SELECT id, name, points FROM users ORDER BY points DESC");
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
