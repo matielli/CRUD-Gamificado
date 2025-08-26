@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>CRUD Gamificado</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>CRUD Gamificado</h1>
+    <p>Ganhe pontos, badges e suba no ranking!</p>
+  </header>
+
+  <main>
+    <!-- Login -->
+    <section id="login-section">
+      <h2>🔑 Login</h2>
+      <form id="login-form">
+        <input type="text" name="username" placeholder="Nome de usuário" required>
+        <input type="password" name="password" placeholder="Senha" required>
+        <button type="submit">Login</button>
+      </form>
+    </section>
+
+    <!-- Registro -->
+    <section id="register-section">
+      <h2>📝 Registrar</h2>
+      <form id="register-form">
+        <input type="text" name="username" placeholder="Nome de usuário" required>
+        <input type="password" name="password" placeholder="Senha" required>
+        <button type="submit">Registrar</button>
+      </form>
+    </section>
+
+    <!-- Dashboard -->
+    <section id="dashboard" style="display:none;">
+      <h2>📌 Meus Hábitos</h2>
+      <form id="habit-form">
+        <input type="text" name="name" placeholder="Título do Hábito" required>
+        <input type="text" name="description" placeholder="Descrição">
+        <button type="submit">Adicionar Hábito</button>
+      </form>
+      <ul id="habits-list"></ul>
+
+      <h2>🏆 Ranking</h2>
+      <div id="ranking"></div>
+
+      <h2>🎖️ Badges</h2>
+      <div id="badges"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Desenvolvido para o Projeto CRUD Gamificado</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
